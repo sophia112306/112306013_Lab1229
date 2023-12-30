@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <!-- Include CSS styles -->
+    <link rel="stylesheet" type="text/css" href="guessNumber.css">
+    <!-- Include JavaScript file -->
+    <script src="guessNumber.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 10:</p>
+        <!-- Trigger this button with the Enter Key. -->
+        <input type="number" id="userGuess" placeholder="Enter your guess"> 
+        <button onclick="checkGuess()">Check Guess</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        // Global variables
+        let secretNumber = generateRandomNumber();
+
+        // Function to handle Enter key
+        function handleEnterKey(event) {
+            if (event.key === 'Enter') {
+                checkGuess();
+            }
+        }
+
+        // Function to generate a random number between 1 and 10
+        function generateRandomNumber() {
+            return Math.floor(Math.random() * 10) + 1;
+        }
+
+        // Function to check the user's guess
+        function checkGuess() {
+            // Your existing checkGuess function code
+        }
+
+        // Function to show image and play sound
+        function showImageAndPlaySound(imageSource, soundSource) {
+            // Your existing showImageAndPlaySound function code
+        }
+
+        // Add event listener for the Enter key
+        document.getElementById("userGuess").addEventListener("keydown", handleEnterKey);
+    </script>
+    <style>
+        /* Your existing CSS styles */
+    </style>
+</body>
+</html>
